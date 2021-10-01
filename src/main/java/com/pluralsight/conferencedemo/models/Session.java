@@ -5,7 +5,7 @@ import java.util.List;
 
 @Entity(name="sessions")
 public class Session {
-    @Id
+   @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long session_id;
     private String session_name;

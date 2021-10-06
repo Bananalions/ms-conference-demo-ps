@@ -1,5 +1,6 @@
 package com.pluralsight.conferencedemo.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
@@ -9,6 +10,7 @@ import java.util.List;
 public class Speaker {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long speaker_id;
 
     private String first_name;
@@ -29,7 +31,7 @@ public class Speaker {
     public Speaker(){
 
     }
-
+    @JsonIgnore
     public List<Session> getSessions() {
         return sessions;
     }
